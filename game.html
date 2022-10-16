@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+        margin: 0 auto;
+        padding: 1em;
+        max-width: 600px;
+        font: normal 100%/1.5 monospace;
+        text-align: start;
+        background: mediumblue;
+        color: white;
+      }
+      
+      h1 {
+        line-height: 1;
+      }
+      
+      a,
+      p {
+        color: yellow;
+      }
+      
+      form {
+        position: sticky;
+        top: 0;
+        z-index: 88;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0.5em;
+        background-color: turquoise;
+        border: 2px outset turquoise;
+        margin: auto -0.5em;
+      }
+      
+      label,
+      input,
+      button {
+        font: inherit;
+        margin: 0 auto 0.5em;
+        padding: 0.25em;
+        flex: 1;
+      }
+      
+      form,
+      input {
+        color: blue;
+      }
+      
+      input {
+        flex: 2 1 auto;
+        max-width: 100%;
+        border: 3px solid blue;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0;
+        caret-color: blue;
+      }
+      
+      button {
+        border: 3px outset blue;
+        color: white;
+        background-color: blue;
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      
+      button:active,
+      button:focus {
+        background-color: white;
+        color: blue;
+      }
+      
+      ol {
+        padding: 0;
+        list-style-position: inside;
+        font-size: smaller;
+        color: yellow;
+      }
+      
+      li {
+        padding: 0.125em 0.75em;
+      }
+      
+      li:before,
+      li:after {
+        color: turquoise;
+      }
+      
+      li:before {
+        content: "<";
+      }
+      
+      li:after {
+        content: ">";
+      }
+      
+      li:nth-child(odd) {
+        background-color: blue;
+      }
+      
+      @media only screen and (prefers-color-scheme: dark) {
+        body {
+          background-color: darkblue;
+        }
+      
+        p,
+        form,
+        ol,
+        a {
+          color: whitesmoke;
+        }
+      
+        li:before,
+        li:after {
+          color: darkcyan;
+        }
+      
+        form {
+          background-color: darkcyan;
+        }
+      
+        li:nth-child(odd) {
+          background-color: mediumblue;
+        }
+      }
+    </style>
+   
+      
+</head>
+<body>
+    <header>
+        <h1>HTML Tags Memory Test</h1>
+        <p>How many HTML tags can you remember? <span id="remain" role="status" aria-live="polite">113</span> to recall&hellip;</p>
+      </header>
+      <main>
+        <noscript>You need to enable JavaScript to make guesses.</noscript>
+        <form id="form">
+          <label for="guess">Tag:</label>
+          <input id="guess" type="text" placeholder="tag" autofocus autocomplete="off">
+          <button id="button" type="submit" aria-controls="remain guessed">Guess</button>
+        </form>
+        <ol id="guessed" role="status" aria-live="polite" aria-atomic="false"></ol>
+      </main>
+   <script src="main.js"></script>
+       
+</body>
+</html>
